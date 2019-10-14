@@ -1,12 +1,48 @@
 ﻿namespace Vehicles
 {
+    using System;
     public abstract class Vehicle
     {
-        public double FuelQuantity { get; protected set; }
-        public double FuelConsumption { get; protected set; }
+        private double fuelQuantity;
+        private double fuelConsumption;
+        private double tankCapacity;
+        public double FuelModifier { get; protected set; } = 1;
 
-        public Vehicle(double fuelQuantity, double fuelConsumption)
+        public double FuelQuantity
         {
+            get => this.fuelQuantity;
+            protected set
+            {
+                if (value>this.TankCapacity)
+                {
+                    this.fuelQuantity = 0;
+                }
+                else
+                {
+                    this.fuelQuantity = value;
+                }
+            }
+        }
+        public double FuelConsumption
+        {
+            get => this.fuelConsumption;
+            protected set
+            {
+                this.fuelConsumption = value;
+            }
+        }
+        public double TankCapacity
+        {
+            get => this.tankCapacity;
+            protected set
+            {
+                this.tankCapacity = value;
+            }
+        }
+
+        public Vehicle(double fuelQuantity, double fuelConsumption, double tankCapacity)
+        {
+            this.TankCapacity = tankCapacity;
             this.FuelQuantity = fuelQuantity;
             this.FuelConsumption = fuelConsumption;
         }
@@ -26,7 +62,16 @@
         }
         public virtual void Refuel(double quantity)
         {
-            this.FuelQuantity += quantity;
+            if (quantity<=0)
+            {
+                throw new ArgumentException($"Fuel must be a positive number");
+            }
+            var availableSpace = this.TankCapacity - this.FuelQuantity;
+            if (quantity > availableSpace)
+            {
+                throw new ArgumentException($"Cannot fit {quantity} fuel in the tank");
+            }
+            this.FuelQuantity += quantity*this.FuelModifier;
         }
 
         public override string ToString()
