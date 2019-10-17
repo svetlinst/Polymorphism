@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operations", "Operations\Operations.csproj", "{4A424C2B-529A-4B96-80C6-7F4ACB76D163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operations", "Operations\Operations.csproj", "{4A424C2B-529A-4B96-80C6-7F4ACB76D163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{BC3BFE8D-1EFF-4330-90D7-FBF0E6EB06EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "Animals\Animals.csproj", "{BC3BFE8D-1EFF-4330-90D7-FBF0E6EB06EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{49747D63-6509-4FDB-B736-81546F386467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "Shapes\Shapes.csproj", "{49747D63-6509-4FDB-B736-81546F386467}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicles", "Vehicles\Vehicles.csproj", "{31339FED-C680-470C-B019-64FFF99954B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vehicles", "Vehicles\Vehicles.csproj", "{31339FED-C680-470C-B019-64FFF99954B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WildFarm", "WildFarm\WildFarm.csproj", "{A69413A2-6E71-4F76-B690-4966AC9E7433}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{31339FED-C680-470C-B019-64FFF99954B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31339FED-C680-470C-B019-64FFF99954B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31339FED-C680-470C-B019-64FFF99954B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A69413A2-6E71-4F76-B690-4966AC9E7433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A69413A2-6E71-4F76-B690-4966AC9E7433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A69413A2-6E71-4F76-B690-4966AC9E7433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A69413A2-6E71-4F76-B690-4966AC9E7433}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
